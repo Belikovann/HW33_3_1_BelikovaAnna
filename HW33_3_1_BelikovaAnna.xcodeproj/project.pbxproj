@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		C8985D9D29C4E895009E9561 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8985D9C29C4E895009E9561 /* AppDelegate.swift */; };
 		C8985D9F29C4E895009E9561 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8985D9E29C4E895009E9561 /* SceneDelegate.swift */; };
-		C8985DA129C4E895009E9561 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8985DA029C4E895009E9561 /* ViewController.swift */; };
+		C8985DA129C4E895009E9561 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8985DA029C4E895009E9561 /* AnimationViewController.swift */; };
 		C8985DA429C4E895009E9561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8985DA229C4E895009E9561 /* Main.storyboard */; };
 		C8985DA629C4E898009E9561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8985DA529C4E898009E9561 /* Assets.xcassets */; };
 		C8985DA929C4E898009E9561 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8985DA729C4E898009E9561 /* LaunchScreen.storyboard */; };
+		C8985DB529C4ED7C009E9561 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8985DB429C4ED7C009E9561 /* Animation.swift */; };
+		C8985DB729C4EDFD009E9561 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8985DB629C4EDFD009E9561 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C8985D9929C4E895009E9561 /* HW33_3_1_BelikovaAnna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HW33_3_1_BelikovaAnna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8985D9C29C4E895009E9561 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8985D9E29C4E895009E9561 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C8985DA029C4E895009E9561 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8985DA029C4E895009E9561 /* AnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		C8985DA329C4E895009E9561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C8985DA529C4E898009E9561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8985DA829C4E898009E9561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8985DAA29C4E898009E9561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8985DB429C4ED7C009E9561 /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		C8985DB629C4EDFD009E9561 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		C8985D9B29C4E895009E9561 /* HW33_3_1_BelikovaAnna */ = {
 			isa = PBXGroup;
 			children = (
-				C8985D9C29C4E895009E9561 /* AppDelegate.swift */,
-				C8985D9E29C4E895009E9561 /* SceneDelegate.swift */,
-				C8985DA029C4E895009E9561 /* ViewController.swift */,
-				C8985DA229C4E895009E9561 /* Main.storyboard */,
+				C8985DB329C4E94E009E9561 /* App */,
+				C8985DB229C4E929009E9561 /* Model */,
+				C8985DB029C4E8D5009E9561 /* ViewController */,
+				C8985DB129C4E8E7009E9561 /* Storyboard */,
 				C8985DA529C4E898009E9561 /* Assets.xcassets */,
-				C8985DA729C4E898009E9561 /* LaunchScreen.storyboard */,
-				C8985DAA29C4E898009E9561 /* Info.plist */,
 			);
 			path = HW33_3_1_BelikovaAnna;
+			sourceTree = "<group>";
+		};
+		C8985DB029C4E8D5009E9561 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C8985DA029C4E895009E9561 /* AnimationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C8985DB129C4E8E7009E9561 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C8985DA229C4E895009E9561 /* Main.storyboard */,
+				C8985DA729C4E898009E9561 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C8985DB229C4E929009E9561 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8985DB429C4ED7C009E9561 /* Animation.swift */,
+				C8985DB629C4EDFD009E9561 /* DataStore.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C8985DB329C4E94E009E9561 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C8985D9C29C4E895009E9561 /* AppDelegate.swift */,
+				C8985D9E29C4E895009E9561 /* SceneDelegate.swift */,
+				C8985DAA29C4E898009E9561 /* Info.plist */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +176,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8985DA129C4E895009E9561 /* ViewController.swift in Sources */,
+				C8985DA129C4E895009E9561 /* AnimationViewController.swift in Sources */,
 				C8985D9D29C4E895009E9561 /* AppDelegate.swift in Sources */,
+				C8985DB529C4ED7C009E9561 /* Animation.swift in Sources */,
+				C8985DB729C4EDFD009E9561 /* DataStore.swift in Sources */,
 				C8985D9F29C4E895009E9561 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,12 +329,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3ZU3FM55GA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW33_3_1_BelikovaAnna/Info.plist;
+				INFOPLIST_FILE = HW33_3_1_BelikovaAnna/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.swiftbook.HW33-3-1-BelikovaAnna";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,12 +360,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3ZU3FM55GA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = HW33_3_1_BelikovaAnna/Info.plist;
+				INFOPLIST_FILE = HW33_3_1_BelikovaAnna/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +373,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.swiftbook.HW33-3-1-BelikovaAnna";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
