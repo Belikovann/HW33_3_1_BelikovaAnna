@@ -8,33 +8,60 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Animation View Controller-->
+        <!--Spring View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="AnimationViewController" customModule="HW33_3_1_BelikovaAnna" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SpringViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4l-Wf-pJv">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I4l-Wf-pJv" customClass="SpringView" customModule="SpringAnimation">
                                 <rect key="frame" x="50" y="50" width="220" height="220"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parameters of animation" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfS-jV-2Uw">
-                                        <rect key="frame" x="16" y="20" width="188" height="16"/>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-OV-EfR">
+                                        <rect key="frame" x="16" y="30" width="59" height="170"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoX-Do-34x">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Curve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddi-vb-kMa">
+                                                <rect key="frame" x="0.0" y="38" width="41" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LyD-EW-qsf">
+                                                <rect key="frame" x="0.0" y="76" width="39" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qIA-na-HSm">
+                                                <rect key="frame" x="0.0" y="114" width="59" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delay" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QH8-lF-5oz">
+                                                <rect key="frame" x="0.0" y="152" width="38.5" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="pfS-jV-2Uw" firstAttribute="leading" secondItem="I4l-Wf-pJv" secondAttribute="leading" constant="16" id="1HM-2S-0aK"/>
                                     <constraint firstAttribute="width" constant="220" id="7JA-0x-1fU"/>
                                     <constraint firstAttribute="height" constant="220" id="HGs-Li-Dgb"/>
-                                    <constraint firstItem="pfS-jV-2Uw" firstAttribute="top" secondItem="I4l-Wf-pJv" secondAttribute="top" constant="20" id="TpV-pa-mc9"/>
-                                    <constraint firstAttribute="trailing" secondItem="pfS-jV-2Uw" secondAttribute="trailing" constant="16" id="cap-fb-IdA"/>
+                                    <constraint firstItem="0cl-OV-EfR" firstAttribute="leading" secondItem="I4l-Wf-pJv" secondAttribute="leading" constant="16" id="xGo-So-cqa"/>
+                                    <constraint firstItem="0cl-OV-EfR" firstAttribute="top" secondItem="I4l-Wf-pJv" secondAttribute="top" constant="30" id="yj3-Ud-bHg"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -42,7 +69,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gv8-tu-YAs">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gv8-tu-YAs" customClass="SpringButton" customModule="SpringAnimation">
                                 <rect key="frame" x="50" y="486.5" width="220" height="30"/>
                                 <color key="backgroundColor" systemColor="systemCyanColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -53,6 +80,10 @@
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="switchAnimationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="454-5x-arn"/>
+                                    <action selector="switchAnimationButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZn-qd-ibc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -65,6 +96,17 @@
                             <constraint firstItem="gv8-tu-YAs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s3n-or-P4J"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="I4l-Wf-pJv" id="0bg-Du-CPO"/>
+                        <outlet property="curveLabel" destination="ddi-vb-kMa" id="Pss-LH-LBf"/>
+                        <outlet property="delayLabel" destination="QH8-lF-5oz" id="3RF-TO-89r"/>
+                        <outlet property="durationLabel" destination="qIA-na-HSm" id="eWk-86-rts"/>
+                        <outlet property="forceLabel" destination="LyD-EW-qsf" id="ldU-bh-xh4"/>
+                        <outlet property="presentLabel" destination="ZoX-Do-34x" id="ePE-1Q-Oh2"/>
+                        <outlet property="presetLabel" destination="ddi-vb-kMa" id="kbs-Ws-DzG"/>
+                        <outlet property="springAnimationView" destination="I4l-Wf-pJv" id="Weg-14-cRE"/>
+                        <outlet property="switchAnimationButton" destination="gv8-tu-YAs" id="zpa-vn-hnA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,50 +8,64 @@
 import Foundation
 
 struct Animation {
-    var name: AnimationName
-    var preset: String
-    var curve: String
-    var force: Int
-    var duration: Int
-    var delay: Int
+    var preset: Preset
+    var curve: CurveType
+    var force: Double
+    var duration: Double
+    var delay = 0.3
     
-    init(animationName: AnimationName,
-         preset: String,
-         curve: String,
-         force: Int,
-         duration: Int,
-         delay: Int
+    init(preset: Preset,
+         curve: CurveType,
+         force: Double,
+         duration: Double
     ) {
-        self.name = animationName
         self.preset = preset
         self.curve = curve
         self.force = force
         self.duration = duration
-        self.delay = delay
     }
+
     
+    static func getAnimation() -> [Animation] {
+        [
+            Animation(preset: .pop, curve: .easeIn, force: 1.2, duration: 1.7),
+            Animation(preset: .slideUp, curve: .easeIn, force: 1.2, duration: 0.5),
+            Animation(preset: .fadeInUp, curve: .linear, force: 2.7, duration: 3.0),
+            Animation(preset: .zoomIn, curve: .linear, force: 0.9, duration: 1.5),
+            Animation(preset: .fall, curve: .spring, force: 1.0, duration: 0.5),
+            Animation(preset: .shake, curve: .spring, force: 4.7, duration: 0.5),
+            Animation(preset: .flash, curve: .spring, force: 1.0, duration: 1.2),
+            Animation(preset: .wooble, curve: .spring, force: 2.5, duration: 2.9),
+            Animation(preset: .swing, curve: .spring, force: 3.0, duration: 1.0),
+        ]
+    }
+    static func getCurrentAnimation() -> Animation {
+        var allAnimation = getAnimation()
+        var currentAnimation = Animation(preset: .pop, curve: .spring, force: 1.0, duration: 0.5)
+        
+        for _ in allAnimation {
+            currentAnimation = allAnimation.randomElement()!
+        }
+        return currentAnimation
+    }
 }
 
 
-enum AnimationName: String {
-    case pop = "Pop"
-    case slideLeft = "SlideLeft"
-    case slideRight = "SlideRight"
-    case slideDown = "SlideDown"
-    case slideUp = "SlideUp"
-    case squeezeLeft = "SqueezeLeft"
-    case squeezeRight = "SqueezeRight"
-    case fadeIn = "FadeIn"
-    case fadeOut = "FadeOut"
-    case fadeOutIn = "FadeOutIn"
-    case fadeInDown = "FadeInDown"
-    case fadeInUp = "FadeInUp"
-    case zoomIn = "ZoomIn"
-    case zoomOut = "ZoomOut"
-    case fall = "Fall"
-    case shake = "Shake"
-    case morph = "Morph"
-    case flash = "Flash"
-    case wobble = "Wobble"
-    case swing = "Swing"
+enum Preset: String, CaseIterable {
+    case pop = "pop"
+    case slideUp = "slideUp"
+    case fadeInUp = "fadeInUp"
+    case zoomIn = "zoomIn"
+    case fall = "fall"
+    case shake = "shake"
+    case flash = "flash"
+    case wooble = "wobble"
+    case swing = "swing"
+}
+
+enum CurveType: String, CaseIterable {
+    case easeIn = "EaseIn"
+    case easeOut = "EaseOut"
+    case linear = "Linear"
+    case spring = "Spring"
 }
