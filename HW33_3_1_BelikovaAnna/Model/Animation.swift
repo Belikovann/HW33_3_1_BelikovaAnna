@@ -8,7 +8,7 @@
 import Foundation
 
 struct Animation {
-    var animationName: AnimationName
+    var name: AnimationName
     var preset: String
     var curve: String
     var force: Int
@@ -22,7 +22,7 @@ struct Animation {
          duration: Int,
          delay: Int
     ) {
-        self.animationName = animationName
+        self.name = animationName
         self.preset = preset
         self.curve = curve
         self.force = force

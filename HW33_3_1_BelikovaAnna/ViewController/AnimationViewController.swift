@@ -9,16 +9,24 @@ import UIKit
 
 final class AnimationViewController: UIViewController {
 
+    var animationType: Animation!
     
-    
+    @IBOutlet var switchAnimationButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
 
-
-    @IBAction func switchingAnimationButton(_ sender: Any) {
+    @IBAction func switchAnimationButtonTapped(_ sender: UIButton) {
     }
+}
+
+
+extension AnimationViewController {
+    private func showAnimationName() -> String {
+        "\(animationType.name)"
+    }
+    
 }
 
