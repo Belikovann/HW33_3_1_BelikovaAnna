@@ -35,14 +35,14 @@ struct Animation {
             Animation(preset: .fall, curve: .spring, force: 1.0, duration: 0.5),
             Animation(preset: .shake, curve: .spring, force: 4.7, duration: 0.5),
             Animation(preset: .flash, curve: .spring, force: 1.0, duration: 1.2),
-            Animation(preset: .wooble, curve: .spring, force: 2.5, duration: 2.9),
+            Animation(preset: .wobble, curve: .spring, force: 2.5, duration: 2.9),
             Animation(preset: .swing, curve: .spring, force: 3.0, duration: 1.0),
         ]
     }
     static func getCurrentAnimation() -> Animation {
         let allAnimation = getAnimation()
         var currentAnimation = Animation(preset: .pop, curve: .spring, force: 1.0, duration: 1.5)
-        
+
         for _ in allAnimation {
             currentAnimation = allAnimation.randomElement()!
         }
@@ -59,7 +59,7 @@ enum Preset: String, CaseIterable {
     case fall = "fall"
     case shake = "shake"
     case flash = "flash"
-    case wooble = "wobble"
+    case wobble = "wobble"
     case swing = "swing"
 }
 

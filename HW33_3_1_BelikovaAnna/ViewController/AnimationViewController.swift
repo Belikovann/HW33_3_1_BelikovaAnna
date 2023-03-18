@@ -24,7 +24,7 @@ final class AnimationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        chooseAnimation()
+
 
     }
     
@@ -36,17 +36,21 @@ final class AnimationViewController: UIViewController {
     
     extension AnimationViewController {
         
-        private func chooseAnimation() {
+        func chooseAnimation() {
             let preset = Animation.getCurrentAnimation().preset
             switchAnimationButton.setTitle("Switch \(preset)", for: .normal)
-            
+
             presentLabel.text = "Preset: \(preset)"
             curveLabel.text = "Curve: \(Animation.getCurrentAnimation().curve)"
             forceLabel.text = "Force: \(Animation.getCurrentAnimation().force)"
             durationLabel.text = "Duration: \(Animation.getCurrentAnimation().duration)"
             delayLabel.text = "Delay: 0.3"
+            
+            springAnimationView.animation = "\(preset)"
+            springAnimationView.curve = "\(Animation.getCurrentAnimation().curve)"
+            springAnimationView.animate()
+            
         }
-
     }
     
 
