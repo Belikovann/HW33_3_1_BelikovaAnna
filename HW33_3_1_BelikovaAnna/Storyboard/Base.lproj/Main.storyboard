@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Spring View Controller-->
+        <!--Animation View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SpringViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AnimationViewController" customModule="HW33_3_1_BelikovaAnna" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,8 +81,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="switchAnimationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="454-5x-arn"/>
-                                    <action selector="switchAnimationButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="WZn-qd-ibc"/>
+                                    <action selector="switchAnimationButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="9r6-Da-bAm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -97,15 +96,13 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="animationView" destination="I4l-Wf-pJv" id="0bg-Du-CPO"/>
-                        <outlet property="curveLabel" destination="ddi-vb-kMa" id="Pss-LH-LBf"/>
-                        <outlet property="delayLabel" destination="QH8-lF-5oz" id="3RF-TO-89r"/>
-                        <outlet property="durationLabel" destination="qIA-na-HSm" id="eWk-86-rts"/>
-                        <outlet property="forceLabel" destination="LyD-EW-qsf" id="ldU-bh-xh4"/>
-                        <outlet property="presentLabel" destination="ZoX-Do-34x" id="ePE-1Q-Oh2"/>
-                        <outlet property="presetLabel" destination="ddi-vb-kMa" id="kbs-Ws-DzG"/>
-                        <outlet property="springAnimationView" destination="I4l-Wf-pJv" id="Weg-14-cRE"/>
-                        <outlet property="switchAnimationButton" destination="gv8-tu-YAs" id="zpa-vn-hnA"/>
+                        <outlet property="curveLabel" destination="ddi-vb-kMa" id="mOy-4W-we6"/>
+                        <outlet property="delayLabel" destination="QH8-lF-5oz" id="fqz-Qy-1gW"/>
+                        <outlet property="durationLabel" destination="qIA-na-HSm" id="ysT-h6-Nux"/>
+                        <outlet property="forceLabel" destination="LyD-EW-qsf" id="qez-k3-4rO"/>
+                        <outlet property="presentLabel" destination="ZoX-Do-34x" id="eju-MK-Xr5"/>
+                        <outlet property="springAnimationView" destination="I4l-Wf-pJv" id="rqD-Hy-qyO"/>
+                        <outlet property="switchAnimationButton" destination="gv8-tu-YAs" id="bKY-gR-FUE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

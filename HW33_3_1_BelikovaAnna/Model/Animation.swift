@@ -40,8 +40,8 @@ struct Animation {
         ]
     }
     static func getCurrentAnimation() -> Animation {
-        var allAnimation = getAnimation()
-        var currentAnimation = Animation(preset: .pop, curve: .spring, force: 1.0, duration: 0.5)
+        let allAnimation = getAnimation()
+        var currentAnimation = Animation(preset: .pop, curve: .spring, force: 1.0, duration: 1.5)
         
         for _ in allAnimation {
             currentAnimation = allAnimation.randomElement()!
